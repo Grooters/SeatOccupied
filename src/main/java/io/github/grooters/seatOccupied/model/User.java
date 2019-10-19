@@ -25,24 +25,29 @@ public class User {
 	@NotNull
 	private String department;
 	// 所占用座位的id，未占用座位即为空
-	private String seatId;
+	private int seatId;
 	@NotNull
 	private String major;
 	// 占座时间
 	private int time;
 	// 入座次数
-	private int seatnumber;
+	@NotNull
+	private int num;
 
-	public User(String name, String nickName, String sex, String department, String seatId, String major, int time,
-			int seatnumber) {
+	public User(String number, String name, String pass, String nickname, String signature, String nickName, String sex,
+			String department, int seatId, String major, int time, int num) {
 		this.nickname = nickName;
 		this.name = name;
+		this.number = number;
+		this.pass = pass;
+		this.nickname = nickname;
+		this.signature = signature;
 		this.sex = sex;
 		this.department = department;
 		this.seatId = seatId;
 		this.major = major;
 		this.time = time;
-		this.seatnumber = seatnumber;
+		this.num = num;
 	}
 
 	public int getTime() {
@@ -53,12 +58,12 @@ public class User {
 		this.time = time;
 	}
 
-	public int getSeatnumber() {
-		return seatnumber;
+	public int getNum() {
+		return num;
 	}
 
-	public void setSeatnumber(int seatnumber) {
-		this.seatnumber = seatnumber;
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 	public User() {
@@ -121,12 +126,12 @@ public class User {
 		this.department = department;
 	}
 
-	public String getSeatId() {
+	public int getSeatId() {
 		return seatId;
 	}
 
-	public void setSeatId(String seatId) {
-		this.seatId = seatId;
+	public void setSeatId(int seatid) {
+		this.seatId = seatid;
 	}
 
 	public String getMajor() {

@@ -4,54 +4,67 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="administrator")
+@Table(name = "administrator")
 public class Administrator {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    @NotNull
-    private String number;
-    @NotNull
-    private String name;
-    @NotNull
-    private int key;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	@NotNull
+	private String number;
+	@NotNull
+	private String name;
+	@NotNull
+	private String pass;
+	@NotNull
+	private int key;
 
-    public Administrator(String number, String name,int key) {
-        this.number = number;
-        this.name = name;
-        this.key=key;
-    }
+	public Administrator() {
+	}
 
-    public int getKey() {
-        return key;
-    }
+	public Administrator(String number, String name, String pass, int key) {
+		this.number = number;
+		this.name = name;
+		this.pass = pass;
+		this.key = key;
+	}
 
-    public void setKey(int key) {
-        this.key = key;
-    }
+	public int getKey() {
+		return key;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setKey(int key) {
+		this.key = key;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getNumber() {
-        return number;
-    }
+	public String getNumber() {
+		return number;
+	}
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
+	public void setNumber(String number) {
+		this.number = number;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
 }

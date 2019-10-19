@@ -9,18 +9,18 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface UserDao extends CrudRepository<User,Integer> {
+public interface UserDao extends CrudRepository<User, Integer> {
 
-    //findBy固定，后面加实体字段即对应表的属性
+	// findBy固定，后面加实体字段即对应表的属性
 
-//    public User findById(String id);
+	// public User findById(String id);
 
-    public User findByNumber(String number);
+	public User findByNumber(String number);
 
-    public List<User> findByName(String name);
+	public List<User> findByName(String name);
 
-    public User findByNickname(String nickname);
+	public User findByNickname(String nickname);
 
-    public List<User> findAll();
+	public List<User> findAll();
 
 }
